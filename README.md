@@ -1,7 +1,7 @@
 # 👗 Fashion Compatibility Learning
 
-> Deep Learning course project — University of Bern / Neuchâtel  
-> Professor: **Paolo Favaro**
+> Deep Learning course project — University of Bern
+> Professor : **Paolo Favaro**
 
 ---
 
