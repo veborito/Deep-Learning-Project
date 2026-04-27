@@ -24,8 +24,8 @@ We frame compatibility as a **metric learning problem**: given images of individ
 ```
 Deep-Learning-Project/
 │
-├── data_pipeline.ipynb        # Sandra — dataset loading, exploration & triplet sampling
-├── model_training.ipynb       # Allizha — model architecture, training & experiments
+├── data_pipeline.ipynb        # dataset loading, exploration & triplet sampling
+├── model_training.ipynb       # model architecture, training & experiments
 ├── references.bib             # BibTeX references
 ├── main.tex                   # Project report (LaTeX, NeurIPS style)
 └── README.md
