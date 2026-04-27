@@ -19,7 +19,7 @@ We frame compatibility as a **metric learning problem**: given images of individ
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 Deep-Learning-Project/
