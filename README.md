@@ -109,12 +109,12 @@ We run **4 configurations** comparing backbones and loss functions:
 pip install datasets torch torchvision Pillow numpy pandas matplotlib tqdm
 ```
 
-### 2. Run the data pipeline (Sandra)
+### 2. Run the data pipeline
 
 Open `data_pipeline.ipynb` in Google Colab with a **T4 GPU** runtime.  
 Loads the Polyvore dataset, builds the `PolyvoreDataset` class with triplet sampling, and creates DataLoaders.
 
-### 3. Run model training (Allizha)
+### 3. Run model training
 
 Open `model_training.ipynb` in Google Colab with a **T4 GPU** runtime.  
 In Cell 8, change these 2 lines to switch between the 4 experiments:
