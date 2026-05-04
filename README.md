@@ -1,6 +1,6 @@
 # Fashion Compatibility Learning via Metric Learning and Modern Vision Backbones
 
-**Deep Learning Course 2026 — University of Bern / Neuchâtel**  
+**Deep Learning Course 2026 — University of Bern**  
 **Professor: Paolo Favaro**
 
 ---
