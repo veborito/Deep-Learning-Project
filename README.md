@@ -148,11 +148,11 @@ We ran **4 configurations** (2 backbones × 2 loss functions):
 
 ## Evaluation Metrics
 
-| Metric | Description | Random Baseline |
-|---|---|---|
-| **AUC** | Compatible vs. random pairs scored by cosine similarity | 0.50 |
-| **FITB** | Select correct missing item from 4 candidates given outfit context | 25% |
-| **Recall@10** | Fraction of truly compatible items in top-10 retrieved results | — |
+| Metric | Description |
+|---|---|
+| **AUC** | Compatible vs. random pairs scored by cosine similarity |
+| **FITB** | Select correct missing item from 4 candidates given outfit context |
+| **Recall@10** | Fraction of truly compatible items in top-10 retrieved results |
 
 ---
 
