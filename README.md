@@ -26,6 +26,7 @@ where $(x_i, x_j)$ is a compatible pair and $x_k$ is an incompatible item.
 ```
 Deep-Learning-Project/
 │
+├── DL_Project_Checkpoints          # Generated Outputs
 ├── DataPipeline.ipynb              # Dataset loading, exploration & triplet sampling
 ├── FashionCompatibilityLearning.ipynb  # Full pipeline: training, evaluation & analysis
 │
@@ -34,7 +35,25 @@ Deep-Learning-Project/
 │
 └── README.md
 ```
+### Generated Outputs (saved to Google Drive)
 
+Running `FashionCompatibilityLearning.ipynb` automatically saves the following to `DL_Project_Checkpoints` in Google Drive:
+
+| File | Description |
+|---|---|
+| `convnext_tiny__triplet__best.pt` | Best checkpoint — ConvNeXt-T + Triplet (112 MB) |
+| `convnext_tiny__contrastive__best.pt` | Best checkpoint — ConvNeXt-T + Contrastive (112 MB) |
+| `swin_t__triplet__best.pt` | Best checkpoint — Swin-T + Triplet (111 MB) |
+| `swin_t__contrastive__best.pt` | Best checkpoint — Swin-T + Contrastive (111 MB) |
+| `training_curves.png` | Train/val loss per run (2×2 grid) |
+| `comparison_bar_chart.png` | AUC & FITB across all 4 runs |
+| `loss_effect.png` | Triplet vs Contrastive loss effect |
+| `backbone_effect.png` | Swin-T vs ConvNeXt-T backbone effect |
+| `similarity_distributions.png` | Compatible vs incompatible cosine similarity distributions |
+| `convergence_comparison.png` | All 4 runs convergence overlaid |
+| `convnext_tiny__contrastive__tsne.png` | t-SNE embedding visualization (best model) |
+
+> Checkpoints are not pushed to GitHub due to file size (~112 MB each).
 ---
 
 ## Dataset
