@@ -145,10 +145,10 @@ We ran **4 configurations** (2 backbones × 2 loss functions), evaluated on the 
 
 | Method | AUC | FITB Acc. | Recall@10 |
 |---|---|---|---|
-| **ConvNeXt-T + Triplet** | **0.772** | **62.8%** | **1.41%** |
-| ConvNeXt-T + Contrastive | 0.727 | 56.4% | 0.90% |
-| Swin-T + Triplet | 0.728 | 57.6% | 0.90% |
-| Swin-T + Contrastive | 0.712 | 52.0% | 0.99% |
+| ConvNeXt-T + Triplet | 0.7035 | **59.4%** ← best FITB | 1.34% |
+| ConvNeXt-T + Contrastive | **0.7114** ← best AUC | 51.0% | 0.97% |
+| Swin-T + Triplet | 0.7017 | 54.4% | 0.66% |
+| Swin-T + Contrastive | 0.6926 | 53.8% | 1.02% |
 | Type-Aware (Vasileva et al. 2018)† | ~0.88 | ~57% | — |
 | Unsup. Conditions (Tan et al. 2019)† | ~0.91 | ~67% | — |
 
@@ -156,21 +156,20 @@ We ran **4 configurations** (2 backbones × 2 loss functions), evaluated on the 
 
 ### Key Findings
 
-1. **ConvNeXt-T + Triplet is the best configuration** on both AUC (0.772) and FITB (62.8%).
-2. **Triplet loss outperforms contrastive loss** consistently across both backbones and both metrics.
-3. **FITB 62.8% exceeds the type-aware supervised baseline (~57%)** without any type supervision — directly supporting our research hypothesis.
-4. **Backbone differences are small** (~3 pp AUC) — the training signal dominates over architecture choice at this scale.
-5. **Recall@10 is inherently low** (~1%) due to small outfit sizes (2–4 items), not model failure.
+1. **Loss function effect is metric-dependent** — contrastive loss wins on AUC (pairwise binary ranking), triplet loss wins on FITB (set-level item selection). No single loss dominates across all metrics.
+2. **ConvNeXt-T slightly outperforms Swin-T** on both AUC and FITB on average, but differences are small — suggesting the training signal matters more than backbone choice at this scale.
+3. **FITB 59.4% approaches the type-aware baseline (~57%)** without any type supervision — directly supporting our research hypothesis.
+4. **Recall@10 is inherently low** (~1%) due to small outfit sizes (2–4 items per outfit), not model failure. Even a perfect model would score low under this metric on this dataset.
 
 ---
 
 ## Evaluation Metrics
 
-| Metric | Description | Random Baseline |
-|---|---|---|
-| **AUC** | Compatible vs. random pairs scored by cosine similarity | 0.50 |
-| **FITB** | Select correct missing item from 4 candidates given outfit context | 25% |
-| **Recall@10** | Fraction of truly compatible items in top-10 retrieved results | — |
+| Metric | Description |
+|---|---|
+| **AUC** | Compatible vs. random pairs scored by cosine similarity |
+| **FITB** | Select correct missing item from 4 candidates given outfit context |
+| **Recall@10** | Fraction of truly compatible items in top-10 retrieved results |
 
 ---
 
