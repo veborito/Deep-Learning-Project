@@ -12,7 +12,7 @@
 
 > Can modern general-purpose vision backbones (Swin Transformer, ConvNeXt) learn sufficient
 > visual compatibility signals **without explicit type conditioning**, to enable
-> compatibility-aware retrieval — reducing the need for type-aware supervision as in prior work?
+> compatibility-aware retrieval?
 
 ---
 
